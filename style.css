@@ -95,23 +95,42 @@ a:hover .hidden {
 
 .more {
     color: rgb(134, 134, 134);
-    padding-top: 2vh;
+    padding: 2vh 0 2vh 2vw;
     text-align: center;
-    display: block;
+    display: flex;
     grid-row-start: 4;
     grid-column-start: 2;
     grid-column-end: 3;
     background-color: #7A306C;
-    width: 10vw;
-    height: 6vh;
+    width: auto;
+    height: 4vh;
     justify-self: center;
     transition: 0.8s;
     font-size: 0.8rem;
 }
 
+.arrow {
+    box-sizing: border-box;
+    position: relative;
+    align-self: center;
+    left: 0px;
+    margin: 0 2vw 0 1vw;
+    display: block;
+    width: 1.3vw;
+    height: 1.3vw;
+    border-right: 3px solid rgb(134, 134, 134);
+    border-bottom: 3px solid rgb(134, 134, 134);
+    transform: rotate(-45deg);
+    transition: all 0.8s;
+}
+
 .more:hover {
     background-color: #A9E4EF;
     color:  rgb(104, 104, 104);
+}
+
+.more:hover .arrow{
+    left: 10px;
 }
 
 #Contact {
@@ -133,8 +152,11 @@ a:hover .hidden {
 }
 
 .cont {
+    position: relative;
     width: 13vw;
     display: flex;
+    top: 0px;
+    transition: all 1s;
 }
 
 .cont img {
@@ -151,6 +173,10 @@ a:hover .hidden {
     justify-self: center;
     margin-left: 1vw;
     color: black;
+}
+
+.cont:hover {
+    top: 20px;
 }
 
 footer {
@@ -180,22 +206,36 @@ footer p {
     }
 
     .more {
+        box-sizing: border-box;
         width: auto;
         height: auto;
-        padding-bottom: 2vh;
+        padding: 2vh 1vw 2vh 2vw;
     }
+
+    .arrow {
+        width: 2vw;
+        height: 2vw;
+    }
+
     #Contact {
         height: 40vh;
     }
+
     .links {
         flex-direction: column;
     }
     .cont {
         display: flex;
         flex-direction: column;
+        left: 0px;
     }
 
     .cont p {
         align-self: center;
+    }
+
+    .cont:hover {
+        left: 20px;
+        top: 0px;
     }
 }
